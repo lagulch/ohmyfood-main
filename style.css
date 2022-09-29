@@ -1,0 +1,608 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
+@-webkit-keyframes fadein {
+  0% {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@keyframes fadein {
+  0% {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@-webkit-keyframes rotation {
+  0% {
+    transform: rotate(0deg) scale(0);
+  }
+  50% {
+    transform: rotate(360deg) scale(1.7);
+  }
+  100% {
+    transform: rotate(720deg) scale(0);
+  }
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg) scale(0);
+  }
+  50% {
+    transform: rotate(360deg) scale(1.7);
+  }
+  100% {
+    transform: rotate(720deg) scale(0);
+  }
+}
+@-webkit-keyframes load {
+  0% {
+    opacity: 1;
+    display: block;
+    z-index: 999;
+  }
+  94% {
+    opacity: 1;
+  }
+  95% {
+    opacity: 0.98;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+    z-index: 0;
+  }
+}
+@keyframes load {
+  0% {
+    opacity: 1;
+    display: block;
+    z-index: 999;
+  }
+  94% {
+    opacity: 1;
+  }
+  95% {
+    opacity: 0.98;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+    z-index: 0;
+  }
+}
+@font-face {
+  font-family: shrikhand;
+  src: url(base/Shrikhand-Regular.ttf);
+}
+body {
+  width: 100%;
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+}
+body .loader {
+  opacity: 0;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-animation: load 2s;
+          animation: load 2s;
+  transition-duration: 2s;
+}
+body .loader .ic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: shrikhand;
+  color: #99E2D0;
+  width: 60px;
+  height: 60px;
+  -webkit-clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+          clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+  background-color: #FF79DA;
+  -webkit-animation: rotation ease-in-out 2s;
+          animation: rotation ease-in-out 2s;
+  transition-duration: 2s;
+  transition-delay: 0;
+}
+body .btn-g-a {
+  width: 100%;
+  text-align: center;
+  margin: 0 0 60px 0;
+}
+body .btn-g-a .btn-g {
+  background: rgb(255, 121, 218);
+  background: linear-gradient(170deg, rgb(255, 121, 218) 0%, rgb(147, 86, 220) 100%);
+  padding: 18px 58px;
+  margin: 0 auto;
+  color: white;
+  font-size: 18px;
+  border: none;
+  border-radius: 40px;
+  box-shadow: rgb(199, 199, 199) 0px 4px 8px;
+}
+body .btn-g-a .btn-g:hover {
+  cursor: pointer;
+  transition: 150ms;
+  filter: brightness(1.2);
+}
+body header {
+  width: 100%;
+  margin: 0 auto;
+  box-shadow: rgb(199, 199, 199) 0px 4px 8px;
+  position: relative;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  z-index: 2;
+  position: relative;
+}
+body header img {
+  display: block;
+  width: 50%;
+  max-width: 380px;
+  margin: 0 auto;
+  padding: 30px 0 20px 0;
+}
+body header .dir {
+  position: absolute;
+  top: 32%;
+  left: 20px;
+  font-size: 30px;
+  color: #353535;
+}
+body header .dir a {
+  text-decoration: none;
+  color: #353535;
+}
+body #localisation {
+  width: 100%;
+  background-color: rgb(238, 238, 238);
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  position: relative;
+  z-index: 1;
+  margin: 0%;
+}
+body #localisation .loc {
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 25px;
+  margin: 0 auto;
+  padding: 22px 0 22px 0;
+  font-weight: 500;
+}
+body #presentation {
+  width: 100%;
+  background-color: rgb(250, 250, 250);
+  margin: 0;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 50px 0 30px 0;
+  text-align: center;
+}
+body #presentation h1 {
+  font-size: 35px;
+  font-weight: 600;
+  width: 70%;
+  margin: 0 auto;
+}
+body #presentation h2 {
+  font-size: 25px;
+  font-weight: 300;
+  width: 92%;
+  margin: 20px auto;
+}
+body #presentation .btn {
+  background: rgb(255, 121, 218);
+  background: linear-gradient(170deg, rgb(255, 121, 218) 0%, rgb(147, 86, 220) 100%);
+  padding: 20px 28px;
+  color: white;
+  font-size: 22px;
+  border: none;
+  border-radius: 40px;
+  box-shadow: rgb(199, 199, 199) 0px 4px 8px;
+}
+body #presentation .btn:hover {
+  cursor: pointer;
+  transition: 150ms;
+  filter: brightness(1.2);
+}
+body .resume {
+  margin-top: 40px;
+}
+body .resume .card {
+  width: 90%;
+  margin: 20px 4% 0 6%;
+  display: flex;
+  position: relative;
+  background-color: rgb(250, 250, 250);
+  box-shadow: rgb(214, 214, 214) 0px 4px 10px;
+  border-radius: 30px;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 30px 0;
+  align-items: center;
+}
+body .resume .card .num {
+  background-color: #9356DC;
+  padding: 4px 10px;
+  border-radius: 100%;
+  position: absolute;
+  left: -15px;
+  color: white;
+}
+body .resume .card i {
+  color: grey;
+}
+body .resume :nth-child(3) {
+  background-color: #f2eafb;
+}
+body .resume :nth-child(3) i {
+  color: #9356DC;
+}
+body main {
+  background-color: rgb(250, 250, 250);
+  padding: 60px 0px;
+  width: 100%;
+  margin-top: 50px;
+}
+body main h1 {
+  width: 90%;
+  margin: 0 auto 30px auto;
+}
+body main .cardresto {
+  margin: 0 auto 25px auto;
+  border-radius: 20px;
+  width: 90%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 0 0 8px 0;
+  box-shadow: rgb(214, 214, 214) 0px 4px 10px;
+  position: relative;
+}
+body main .cardresto img {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  width: 100%;
+  height: 210px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body main .cardresto a {
+  text-decoration: none;
+  color: black;
+}
+body main .cardresto .new {
+  padding: 10px 15px;
+  color: rgb(13, 143, 111);
+  font-weight: 500;
+  background-color: rgb(153, 226, 208);
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  border-radius: 5px;
+}
+body main .cardresto .cardbas {
+  display: flex;
+  justify-content: space-between;
+}
+body main .cardresto .cardbas .cardbastxt {
+  display: flex;
+  flex-direction: column;
+}
+body main .cardresto .cardbas .cardbastxt h2 {
+  font-weight: 600;
+  font-size: 20px;
+  padding: 0 0 0 15px;
+  margin: 10px 0 0 0;
+}
+body main .cardresto .cardbas .cardbastxt h3 {
+  font-size: 18px;
+  font-weight: 400;
+  padding: 0 0 0 15px;
+  margin: 7px 0 10px 0;
+}
+body main .cardresto .cardbas .cardlike {
+  font-size: 25px;
+  padding: 20px 25px 0 0;
+}
+body main .cardresto .cardbas .cardlike i {
+  position: relative;
+}
+body main .cardresto .cardbas .cardlike i i {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(20deg, rgb(255, 153, 227) 0%, rgb(151, 97, 215) 89%);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0;
+  transition: 150ms;
+}
+body main .cardresto .cardbas .cardlike i i:hover {
+  transition: 150ms;
+  opacity: 1;
+}
+@media screen and (min-width: 1000px) {
+  body main {
+    width: 100%;
+    margin: 40px 0 0 0;
+  }
+  body main .choix {
+    display: flex;
+    width: 100%;
+    max-width: 1300px;
+    flex-wrap: wrap;
+    margin: 0 auto;
+  }
+  body main .choix .cardresto {
+    width: 450px;
+  }
+  body main h1 {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto 6q0px auto;
+  }
+}
+body footer {
+  background-color: #353535;
+  color: white;
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 0 0 30px 0;
+}
+body footer h1 {
+  font-family: shrikhand;
+  font-size: 20px;
+  font-weight: 400;
+  width: 85%;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+body footer .footerchoix {
+  width: 85%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+body footer .footerchoix a {
+  text-decoration: none;
+  color: white;
+  margin: 5px 0;
+}
+body footer .footerchoix a i {
+  width: 15px;
+}
+body .background {
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin: 0;
+}
+body .background img {
+  width: 100%;
+  height: auto;
+}
+@media screen and (min-width: 1000px) {
+  body .background {
+    width: 100%;
+    height: 300px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  body .background img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
+body .menuresto {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  background-color: rgb(250, 250, 250);
+  border-radius: 38px;
+  margin: 0;
+  position: relative;
+  top: -35px;
+  padding: 12px 0 0 0;
+}
+body .menuresto .resto {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 4%;
+}
+body .menuresto .resto h1 {
+  font-family: shrikhand;
+  font-size: 25px;
+  font-weight: 400;
+}
+body .menuresto .resto .cardlike {
+  font-size: 25px;
+}
+body .menuresto .resto .cardlike i {
+  position: relative;
+}
+body .menuresto .resto .cardlike i i {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(20deg, rgb(255, 153, 227) 0%, rgb(151, 97, 215) 89%);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0;
+  transition: 150ms;
+}
+body .menuresto .resto .cardlike i i:hover {
+  transition: 150ms;
+  opacity: 1;
+}
+body .menuresto .listentree {
+  margin: 0 0 40px 0;
+}
+body .menuresto .listentree :nth-child(1) {
+  -webkit-animation-delay: 50ms;
+          animation-delay: 50ms;
+}
+body .menuresto .listentree :nth-child(2) {
+  -webkit-animation-delay: 100ms;
+          animation-delay: 100ms;
+}
+body .menuresto .listentree :nth-child(3) {
+  -webkit-animation-delay: 150ms;
+          animation-delay: 150ms;
+}
+body .menuresto .listentree :nth-child(4) {
+  -webkit-animation-delay: 200ms;
+          animation-delay: 200ms;
+}
+body .menuresto .plats {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 17px;
+  font-weight: 300;
+  padding: 0 4%;
+  color: #353535;
+}
+body .menuresto .plats .sousligne {
+  width: 41px;
+  overflow: visible;
+  border-bottom: 3px #99E2D0 solid;
+}
+body .menuresto .menucard {
+  -webkit-animation: fadein 1s 0ms ease-in-out;
+          animation: fadein 1s 0ms ease-in-out;
+  width: 92%;
+  height: 73px;
+  background-color: white;
+  margin: 20px auto;
+  border-radius: 20px;
+  box-shadow: rgb(214, 214, 214) 0px 4px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  overflow: hidden;
+}
+body .menuresto .menucard .titrebouffe {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 12px 0 12px 12px;
+  width: 100%;
+  height: 48px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+body .menuresto .menucard .titrebouffe h2 {
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0 0 8px 0;
+  height: 50%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+}
+body .menuresto .menucard .titrebouffe h3 {
+  font-size: 16px;
+  font-weight: 300;
+  margin: 0;
+  height: 50%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+}
+body .menuresto .menucard .titrebouffe h3 b {
+  font-weight: 400;
+}
+body .menuresto .menucard .achat {
+  display: flex;
+  justify-content: space-between;
+  width: 128px;
+  height: 100%;
+  align-items: flex-end;
+  margin-right: -73px;
+  margin-left: 10px;
+  overflow: visible;
+  transition: 200ms;
+}
+body .menuresto .menucard .achat .prix {
+  width: 55px;
+  padding: 0 0 12px 0;
+  font-weight: 600;
+}
+body .menuresto .menucard .achat .valide {
+  height: 73px;
+  width: 73px;
+  background-color: mediumaquamarine;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .menuresto .menucard .achat .valide i {
+  color: mediumaquamarine;
+  padding: 5px;
+  background-color: white;
+  border-radius: 20px;
+}
+body .menuresto .menucard:hover > .achat {
+  margin-right: 0;
+  transition: 200ms;
+}
+body .menuresto .menucard:hover > .achat i {
+  transform: rotate(360deg);
+  transition: 300ms;
+  transition-delay: 100ms;
+}
+body .menuresto .menucard:hover > .titrebouffe {
+  width: 55%;
+  transition: 200ms;
+}
+@media screen and (min-width: 1000px) {
+  body .menuresto {
+    margin: 30px 0 0 0;
+  }
+  body .menuresto .listentree {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  body .menuresto .listentree .menucard {
+    max-width: 400px;
+  }
+}/*# sourceMappingURL=style.css.map */
