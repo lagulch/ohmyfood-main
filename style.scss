@@ -6,7 +6,7 @@ $solarrière: rgb(250, 250, 250);
 @keyframes fadein{
     0% {
         opacity: 0;
-        transform: translateY(-40px);
+        transform: translateY(40px);
     }
     100% {
         opacity: 1;
@@ -75,7 +75,7 @@ body{
     .btn-g-a{
         width: 100%;
         text-align: center;
-        margin: 0 0 60px 0;
+        margin: -20px 0 70px 0;
     .btn-g{
             background: rgb(255,121,218);
             background: linear-gradient(170deg, rgba(255,121,218,1) 0%, rgba(147,86,220,1) 100%);
@@ -327,7 +327,7 @@ body{
             h1{
                 width: 100%;
                 max-width: 1200px;
-                margin: 0 auto 6q0px auto;
+                margin: 0 auto 0px auto;
             }
         }
     }
@@ -374,7 +374,8 @@ body{
     @media screen and (min-width: 1000px){
         .background{
             width: 100%;
-            height: 300px;
+            height: 350px;
+            max-height: 350px;
             object-fit: cover;
             img{
                 width: 100%;
@@ -431,13 +432,13 @@ body{
                 animation-delay: 50ms;
             }
             :nth-child(2){
-                animation-delay: 100ms;
-            }
-            :nth-child(3){
                 animation-delay: 150ms;
             }
-            :nth-child(4){
+            :nth-child(3){
                 animation-delay: 200ms;
+            }
+            :nth-child(4){
+                animation-delay: 250ms;
             }
         }
         .plats{
@@ -526,6 +527,9 @@ body{
                         border-radius: 20px;
                     }
                 }
+            }
+            &:hover{
+                cursor: pointer;
             }
             &:hover > .achat{
                 margin-right: 0;
@@ -633,7 +637,7 @@ body{
     }
     @media screen and (min-width: 1000px){
         .menuresto{
-            margin: 30px 0 0 0;
+            margin: 0 0 0 0;
             display: flex;
             flex-direction: column;
 
