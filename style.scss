@@ -2,6 +2,7 @@ $primary: #9356DC;
 $secondaire: #FF79DA;
 $tertiaire: #99E2D0;
 $solarrière: rgb(250, 250, 250);
+/*animation menu*/
 
 @keyframes fadein{
     0% {
@@ -13,6 +14,7 @@ $solarrière: rgb(250, 250, 250);
         transform: translateY(0px);
     }
 }
+/*animation loader*/
 
 @keyframes rotation{
     0% { transform: rotate(0deg) scale(0);}
@@ -69,7 +71,6 @@ body{
             background-color: #FF79DA;
             animation: rotation ease-in-out 2s;
             transition-duration: 2s;
-            transition-delay: 0;
         }
     }
     .btn-g-a{
@@ -168,12 +169,10 @@ body{
             box-shadow: rgb(199, 199, 199) 0px 4px 8px;
             &:hover{
                 cursor: pointer;
-                transition: 150ms;
-                filter: brightness(1.2);
+                filter:brightness(1.2);
             }
         }
     }
-
     .resume{
         margin-top: 40px;
         .card{
@@ -199,11 +198,11 @@ body{
             i{
                 color: grey;
             }
-        }
-        :nth-child(3){
-            background-color: lighten($color: $primary, $amount: 35%);
-            i{
-                color: $primary;
+            &:hover{
+                background-color: lighten($color: $primary, $amount: 35%);
+                i{
+                    color: $primary;
+                }
             }
         }
     }
