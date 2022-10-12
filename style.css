@@ -104,6 +104,7 @@ body .loader {
   -webkit-animation: load 2s;
           animation: load 2s;
   transition-duration: 2s;
+  display: none;
 }
 body .loader .ic {
   display: flex;
@@ -215,17 +216,15 @@ body #presentation h2 {
 body #presentation .btn {
   background: rgb(255, 121, 218);
   background: linear-gradient(170deg, rgb(255, 121, 218) 0%, rgb(147, 86, 220) 100%);
-  padding: 18px 58px;
-  margin: 0 auto;
+  padding: 20px 28px;
   color: white;
-  font-size: 18px;
+  font-size: 22px;
   border: none;
   border-radius: 40px;
   box-shadow: rgb(199, 199, 199) 0px 4px 8px;
 }
 body #presentation .btn:hover {
   cursor: pointer;
-  transition: 150ms;
   filter: brightness(1.2);
 }
 body .resume {
